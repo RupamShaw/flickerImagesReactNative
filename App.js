@@ -1,15 +1,18 @@
-import { View, Text } from "react-native";
-
+import { View, SafeAreaView } from "react-native";
+import {Text} from './components'
+import FlicketListScreenState from './screens/FlickerScreen/FlickerListScreenState'
 export default function App() {
+
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
-        justifyContent: "center",
+        justifyContent: "flexStart",
         alignItems: "center",
       }}
     >
-      <Text>Universal React with Expo</Text>
-    </View>
+      <Text title="Flickr Images" />
+      <FlicketListScreenState />
+    </SafeAreaView>
   );
 }
