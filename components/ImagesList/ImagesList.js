@@ -1,12 +1,11 @@
-import React from "react"
-import {FlatList, View, Dimensions, StyleSheet} from "react-native"
-import {Image} from "../Image/Image"
-import {Text} from "../Text/Text"
-import {Section} from "../Section/Section"
+import React from 'react'
+import {FlatList, View, Dimensions, StyleSheet} from 'react-native'
+import {Image} from '../Image/Image'
+import {Section} from '../Section/Section'
 
-const windowWidth = Dimensions.get("window").width
+const windowWidth = Dimensions.get('window').width
 
-const ListFooterComponent = () => {
+function ListFooterComponent() {
   // TODO: move to top button
   return (
     <View
@@ -25,7 +24,7 @@ const gridRenderItem = ({item, index}) => {
   return (
     <View key={index} style={{paddingHorizontal: 5, width: windowWidth / 3}}>
       <Section>
-        <Image key={index + " " + index + " " + index} source={item} />
+        <Image key={`${index} ${index} ${index}`} source={item} />
         {/* <Text key={index+" "+index} title={item}/> */}
       </Section>
     </View>
@@ -36,13 +35,16 @@ const keyExtractor = (item, index) => {
   return `${item.id}${index}`
 }
 
-const ItemSeparatorComponent =() => <View style={styles.separator} />
+function ItemSeparatorComponent() {
+  return <View style={styles.separator} />
+}
 
 export function ImagesList(props) {
   console.log(`total images count ${props.data.length}`)
 
   const handleLoadMoreData = ({distanceFromEnd}) => {
-    if (distanceFromEnd < 0) return
+    console.log(`distanceFromEnd ${distanceFromEnd}`)
+    if (distanceFromEnd <= 0) return
     props.onPagination()
   }
 
@@ -89,7 +91,8 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   item: {
-    padding: 10,height:80
+    padding: 10,
+    height: 80,
   },
   separator: {
     height: 0.5,
@@ -118,5 +121,4 @@ const styles = StyleSheet.create({
     fontSize: 15,
     textAlign: 'center',
   },
-});
-
+})

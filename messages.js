@@ -1,1 +1,2 @@
-export const Image_Fetch_Issues="Issues in Image fetching"
+// eslint-disable-next-line camelcase
+export const ImageFetchIssues = 'Issues in Image fetching'

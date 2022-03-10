@@ -1,20 +1,20 @@
-import React from "react";
-import { View } from "react-native";
-import { Button } from "../Button/Button";
-import { Section } from "../Section/Section";
-import { Text } from "../Text/Text";
+import React from 'react'
+import {View} from 'react-native'
+import {Button} from '../Button/Button'
+import {Section} from '../Section/Section'
+import {Text} from '../Text/Text'
 
-export const ScreenFail = (props) => {
+export function ScreenFail(props) {
   return (
     <View
       style={{
         flex: 1,
-        justifyContent: "center"
+        justifyContent: 'center',
       }}
     >
-      <Section first={true}>
-        <Text color="warning" size="large" center={true}>
-          {props.message || "Unable to load screen."}
+      <Section first>
+        <Text color="warning" size="large" center>
+          {props.message || 'Unable to load screen.'}
         </Text>
       </Section>
       {props.onRetry && (
@@ -23,5 +23,5 @@ export const ScreenFail = (props) => {
         </Section>
       )}
     </View>
-  );
-};
+  )
+}
