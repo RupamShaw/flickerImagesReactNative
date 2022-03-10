@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.26.0",
     "expo": "^44.0.0",
+    "prop-types": "^15.8.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
@@ -10,6 +11,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@storybook/addon-actions": "^5.3",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-ondevice-actions": "^5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
+    "babel-loader": "^8.2.3",
     "babel-plugin-inline-dotenv": "^1.6.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^8.10.0",
@@ -35,7 +44,9 @@
     "lint": "eslint '**/*.{js,jsx}'",
     "format": "yarn prettier && yarn lint --cache --fix",
     "pre-commit": "yarn format",
-    "pre-push": "yarn format"
+    "pre-push": "yarn format",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook"
   },
   "version": "1.0.0",
   "private": true,
