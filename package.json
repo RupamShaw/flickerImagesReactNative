@@ -28,12 +28,16 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "format": "yarn prettier && yarn lint --fix",
+    "pre-commit": "yarn format",
+    "pre-push": "yarn format"
   },
   "version": "1.0.0",
   "private": true,
   "name": "flickerImagesReactNative",
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "**/*.{js,jsx,ts,tsx}": "eslint --cache --fix"
   }
 }
