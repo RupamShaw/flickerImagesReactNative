@@ -1,6 +1,6 @@
 import {SafeAreaView} from 'react-native'
-import {Text} from './components'
-import {FlickerListScreenState} from './screens'
+import {Text} from './src/components'
+import {FlickerListScreenState} from './src/screens'
 
 export default function App() {
   return (

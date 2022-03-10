@@ -40,10 +40,10 @@ function ItemSeparatorComponent() {
 }
 
 export function ImagesList(props) {
+  // eslint-disable-next-line no-console
   console.log(`total images count ${props.data.length}`)
 
   const handleLoadMoreData = ({distanceFromEnd}) => {
-    console.log(`distanceFromEnd ${distanceFromEnd}`)
     if (distanceFromEnd <= 0) return
     props.onPagination()
   }
