@@ -28,9 +28,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "prettier": "prettier --write --single-quote --no-semi --no-unused-vars --trailing-comma es5 --print-width 80 \"**/*.{js,jsx}\"",
     "prepare": "husky install",
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "format": "yarn prettier && yarn lint --fix",
+    "lint": "eslint '**/*.{js,jsx}'",
+    "format": "yarn prettier && yarn lint --cache --fix",
     "pre-commit": "yarn format",
     "pre-push": "yarn format"
   },
