@@ -28,7 +28,7 @@ module.exports = {
     'import/extensions': ['error', 'never'],
     'import/prefer-default-export': 0,
     'import/no-unresolved': 0,
-    'no-console': 0,
+    'no-console': 'error',
     'no-mixed-operators': 0,
     'no-use-before-define': 0,
     'no-shadow': 'off',

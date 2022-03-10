@@ -42,3 +42,26 @@ This project can be run from a web browser or the Expo client app. You may find 
 - Learn more about [Universal React](https://docs.expo.dev/).
 - See what API and components are [available in the React runtimes](https://docs.expo.dev/versions/latest/).
 - Find out more about developing apps and websites: [Guides](https://docs.expo.dev/guides/).
+
+
+yarn add eslint --dev
+yarn eslint --init 
+// this will create .eslintrc.js
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier --dev
+and then in eslintrc.js incorporate prettier
+
+so after this we can see in yarn lint prettier error also
+we can use own prettier config what we want to use .prettierrc.js
+
+in package.json 
+  "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix", 
+
+--fix for auto fix most of prettier and eslint issues
+
+
+prettier commit hook for husky non formatted code not to push in git
+
+====for typescript will do later
+npx expo-cli init
+
