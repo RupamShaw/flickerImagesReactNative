@@ -1,13 +1,15 @@
-const api_key =process.env.flicker_api_key
+// eslint-disable-next-line camelcase
+const api_key = process.env.flicker_api_key
 
-const data = (page,text="kitten") => {
+const data = (page, text = 'kitten') => {
   return {
-    method: "flickr.photos.search",
+    method: 'flickr.photos.search',
+    // eslint-disable-next-line camelcase
     api_key,
-    text,//: "kitten", // Search Text
+    text, // : "kitten", // Search Text
     per_page: 21,
     page,
-    format: "json",
+    format: 'json',
     nojsoncallback: 1,
   }
 }
@@ -25,6 +27,6 @@ export const getFlickrImageURL = (photo, size) => {
     // Configure image size
     url += `_${size}`
   }
-  url += ".jpg"
+  url += '.jpg'
   return url
 }
