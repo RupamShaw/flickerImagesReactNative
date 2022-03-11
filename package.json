@@ -23,6 +23,8 @@
     "babel-plugin-inline-dotenv": "^1.6.0",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-react-native": "^4.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -36,6 +38,7 @@
     "husky": ">=6",
     "jest": "^27.5.1",
     "jest-expo": "^44.0.1",
+    "jest-expo-enzyme": "^1.2.5",
     "lint-staged": ">=10",
     "prettier": "^2.5.1",
     "react-test-renderer": "17"
@@ -53,10 +56,16 @@
     "pre-push": "yarn format",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "testDebug": "jest -o --watch --coverage=false",
+    "testFinal": "jest",
+    "updateSnapshots": "jest -u --coverage=false"
   },
-  "jest": {
+  "jest":{
     "preset": "jest-expo"
+  },
+  "resolutions": {
+    "jest-environment-jsdom": "27.4.6"
   },
   "version": "1.0.0",
   "private": true,

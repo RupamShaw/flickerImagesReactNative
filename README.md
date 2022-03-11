@@ -73,5 +73,9 @@ https://jestjs.io/docs/getting-started
 https://jestjs.io/docs/tutorial-react-native
 
 
-====for typescript will do later
+Issues:  'react-test-renderer' and enzme are not working together in expo project but works well in non expo
+- for use either skip test of other
+-react-test-renderer === package.json "jest":{  "preset": ["jest-expo"] }, and rerename jest.config.js to someother like jestconfig.js
+
+-
 npx expo-cli init
