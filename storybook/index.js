@@ -18,7 +18,11 @@ configure(() => {
 
 // Refer to https://github.com/storybookjs/react-native/tree/master/app/react-native#getstorybookui-options
 // To find allowed options for getStorybookUI
-const StorybookUIRoot = getStorybookUI({})
+const StorybookUIRoot = getStorybookUI({
+  // Pass AsyncStorage below if you want Storybook to open your
+  // last visited story after you close and re-open your app
+  asyncStorage: null,
+})
 
 // If you are using React Native vanilla and after installation you don't see your app name here, write it manually.
 // If you use Expo you should remove this line.

@@ -48,9 +48,8 @@ export function Button(props) {
           )}
           <View style={{flexShrink: 1}}>
             <Text
-              size="large"
+              // size="large"
               color={textColor}
-              font="accent"
               center
               allowFontScaling={false}
             >

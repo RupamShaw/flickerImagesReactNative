@@ -9,11 +9,12 @@ module.exports = {
     'airbnb/hooks',
     'prettier',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   globals: {
     __DEV__: true,
   },
-  plugins: ['react', 'prettier', 'jsx-a11y', 'import'],
+  plugins: ['react', 'prettier', 'jsx-a11y', 'import', 'jest'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -22,6 +23,11 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
     'arrow-parens': 0,
     'global-require': 0,
     'array-element-newline': [2, 'consistent'],

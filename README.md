@@ -62,6 +62,16 @@ in package.json
 
 prettier commit hook for husky non formatted code not to push in git
 
+
+
+====storybook===
+https://github.com/expo/examples/tree/master/with-storybook
+https://storybook.js.org/docs/react/get-started/install
+======
+======Unit Test====
+https://jestjs.io/docs/getting-started
+https://jestjs.io/docs/tutorial-react-native
+
+
 ====for typescript will do later
 npx expo-cli init
-
